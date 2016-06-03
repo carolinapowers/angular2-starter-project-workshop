@@ -15,32 +15,26 @@ export class MessageService {
   private gadget = 'Hello Gadget';
   private gadgeT: gadget = {gadgetProp: ''};
 
-  setMessageOnService (gadget: string) {
-    return this.gadget = gadget;
-  }
-
   stayMessageD(g: string) {
     return this.gadgeT.gadgetProp = g;
   }
-
   getStayMessage() :string {
     return this.gadgeT.gadgetProp;
   } 
 
-  getMessage(): string {
+ 
+  setMyMessage (newMessage : string) {
+  	 return this.myVeryOwnMessage.message = newMessage;
+  }
+  setMessage(newMessage: string){
+     return this.message = newMessage;
+  };
+   getMessage(): string {
     return this.message;
   };
 
   getMyMessage() : string {
-  	return this.myVeryOwnMessage.message;
+    return this.myVeryOwnMessage.message;
   }
 
-  setMyMessage (newMessage : string) {
-  	 return this.myVeryOwnMessage.message = newMessage;
-  }
-
-  setMessage(newMessage: string){
-     return this.message = newMessage;
-
-  };
 }

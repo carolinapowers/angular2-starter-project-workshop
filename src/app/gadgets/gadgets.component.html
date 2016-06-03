@@ -6,11 +6,10 @@
 <p [style.color]="elementColor">{{title}}</p> 
 <p [style.visibility]="myInput ? 'visible' : 'hidden'">I'm visible because I have myInput model</p>
 <p [style.visibility]="inputVariable.value ? 'visible' : 'hidden'">I'm visible because I have #inputVariable.value</p>
-<p>{{serviceMessage}}</p>
-<p>{{messageService.setMessageOnService()}}
+
 <input [(ngModel)]="stayMessageM">
 <button (click)="stayMessage(stayMessageM)">Click For Stay Message</button>
-<p>{{messageService.getStayMessage()}}</p>
-{{stayM }}
+<p *ngIf="messageService.getStayMessage()">This message persists: {{messageService.getStayMessage()}}</p>
+
 
 
