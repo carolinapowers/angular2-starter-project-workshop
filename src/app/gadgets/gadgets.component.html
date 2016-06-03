@@ -1,0 +1,8 @@
+<h1 (mouseenter)="changeColor()">{{title}}<h1>
+<input [(ngModel)]="myInput">
+<button class="btn" (click)="getValue()">ClicK Me"</button>
+<p *ngIf="myInput">My Input with *ngIf:{{myInput}}</p>
+<h4 [innerHtml]="myInput">hi </h4>
+<p [style.color]="elementColor">{{title}}</p> 
+<p [style.visibility]="myInput ? 'visible' : 'hidden'">I'm visible because I have myInput</p>
+
