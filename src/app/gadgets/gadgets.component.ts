@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {MessageService} from '../shared';
 
 @Component ({
 	selector: 'gadget',
@@ -9,10 +10,18 @@ export class GadgetsComponent {
 	myInput: string = '';
 	color: string[] = [];
 	elementColor : string ='';
+	sendMessage : string = '';
+	serviceMessage: string = 'Something';
+	stayM: string = 'stayMessage';
     
+	constructor(private messageService: MessageService) { }
 
-	getValue() {
-		console.log('I was clicked');
+	setValue (inputValue: string) {
+		this.serviceMessage = this.messageService.setMessageOnService(inputValue);
+	}
+
+	stayMessage(s:string) {
+		this.stayM = this.messageService.stayMessageD(s);
 	}
 
 	changeColor () {

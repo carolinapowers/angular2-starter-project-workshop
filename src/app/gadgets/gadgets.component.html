@@ -1,9 +1,16 @@
 <h1 (mouseenter)="changeColor()">{{title}}<h1>
 <input [(ngModel)]="myInput" #inputVariable>
-<button class="btn" (click)="getValue()">ClicK Me"</button>
+<button class="btn" (click)="setValue(myInput)">ClicK Me"</button>
 <p *ngIf="myInput">My Input with *ngIf:{{myInput}}</p>
 <h4 [innerHtml]="inputVariable.value">hi </h4>
 <p [style.color]="elementColor">{{title}}</p> 
 <p [style.visibility]="myInput ? 'visible' : 'hidden'">I'm visible because I have myInput model</p>
 <p [style.visibility]="inputVariable.value ? 'visible' : 'hidden'">I'm visible because I have #inputVariable.value</p>
+<p>{{serviceMessage}}</p>
+<p>{{messageService.setMessageOnService()}}
+<input [(ngModel)]="stayMessageM">
+<button (click)="stayMessage(stayMessageM)">Click For Stay Message</button>
+<p>{{messageService.getStayMessage()}}</p>
+{{stayM }}
+
 
