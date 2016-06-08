@@ -23,5 +23,9 @@ import {GadgetsComponent} from './gadgets';
   {path: '/*', component: HomeComponent }
 ])
 export class AppComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+  }
+  navigate(route) {
+    this.router.navigate(route);
+  }
 }

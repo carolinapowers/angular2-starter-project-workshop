@@ -9,7 +9,8 @@
         <a class="mdl-navigation__link" [routerLink]="['/home']">HOME</a>
         <a class="mdl-navigation__link" [routerLink]="['/about']">ABOUT</a>
         <a class="mdl-navigation__link" [routerLink]="['/items']">ITEMS</a>
-        <a class="mdl-navigation__link" [routerLink]="['/gadgets']">GADGETS</a>
+        <!-- <a class="mdl-navigation__link" [routerLink]="['/gadgets']">GADGETS</a> -->
+        <a class="mdl-navigation__link" (click)="navigate(['/gadgets'])">GADGETS</a>
       </nav>
     </div>
   </header>
